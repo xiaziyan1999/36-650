@@ -1,0 +1,1 @@
+select distinct(college) from player_bios

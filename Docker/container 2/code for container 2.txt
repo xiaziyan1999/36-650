@@ -1,0 +1,3 @@
+docker pull mcr.microsoft.com/mmlspark/release
+docker run -it -p 9999:8888 --name test_container -e ACCEPT_EULA=yes mcr.microsoft.com/mmlspark/release
+jupyter notebook

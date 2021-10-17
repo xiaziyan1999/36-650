@@ -1,0 +1,5 @@
+docker login
+docker build -t=xiaziyan/testhello .
+docker run xiaziyan/testhello
+docker tag xiaziyan/testhello xiaziyan/testhello:1.0
+docker push xiaziyan/testhello:1.0

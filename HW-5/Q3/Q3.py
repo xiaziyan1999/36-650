@@ -1,16 +1,44 @@
-def oneEdit(s1, s2):
-    if abs(len(s1) - len(s2)) > 1: 
+def checkremove(s1, s2):
+    count = 0
+    for i in s1:
+        if (i not in s2):
+            count = count + 1    
+    if (count <= 1):
+        return True
+    else:
         return False
-    count = 0;i = 0;j = 0
-    while i < len(s1) and j < len(s2):
-        if s1[i] != s2[j]:
-            if count == 1: return False
-            if len(s1) > len(s2): i+=1
-            elif len(s1) < len(s2): j+=1
-            else:  i+=1;j+=1;count+=1
-        else:     i+=1;j+=1
-    if i < len(s1) or j < len(s2): count+=1
-    return count == 1
+        
+
+def checkinsert(s1,s2):
+    count = 0
+    for j in s2:
+        if (j not in s1):
+            count = count + 1
+
+    if (count <= 1):
+        return True
+    else:
+        return False
+
+def checkreplace(s1,s2):
+    count = 0
+    for i in range(len(s1)):
+        if (s1[i]!=s2[i]):
+            count = count + 1
+    if (count <= 1):
+        return True
+    else:
+        return False
+
+def oneEdit(s1,s2):
+    if (abs(len(s1)-len(s2))>1):
+        return False
+    if (len(s1)>len(s2)):
+        return checkremove(s1,s2)
+    elif (len(s2)>len(s1)):
+        return checkinsert(s1,s2)
+    else:
+        return checkreplace(s1,s2)
 
 oneEdit("pale", "ple") 
 oneEdit("pales","pale")

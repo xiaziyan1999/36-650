@@ -25,4 +25,7 @@ sql ='''CREATE TABLE employee(
 
 cur = conn.cursor()
 cur.execute(sql)
+conn.commit()
+cur.close()
+conn.close()
 

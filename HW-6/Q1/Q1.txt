@@ -1,0 +1,1 @@
+I will use Tuple. Tuples are the same as lists are with the exception that the data once entered into the tuple cannot be changed no matter what.

@@ -30,9 +30,6 @@ class Node(object):
         if not self.data: 
             print ("Tree is incomplete.")
             return None
-        if (not (data in self.arr)):
-            print("Element doesn't exist")
-            return
         tmp=self.arr
         tmp.remove(data)
         self.data=tmp[0]

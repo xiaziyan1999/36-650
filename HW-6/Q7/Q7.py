@@ -27,6 +27,12 @@ class Node(object):
             
 #3. Create the delete () function for this data structure            
     def delete(self,data):
+        if not self.data: 
+            print ("Tree is incomplete.")
+            return None
+        if (not (data in self.arr)):
+            print("Element doesn't exist")
+            return
         tmp=self.arr
         tmp.remove(data)
         self.data=tmp[0]

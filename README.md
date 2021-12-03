@@ -1,3 +1,6 @@
 # 36-650
 Statistical computing repository
-ewfbeqhjrwbfwerfruhfuihru3ighfuiq34w
+Docker
+Data Structure
+Algorithm
+Database

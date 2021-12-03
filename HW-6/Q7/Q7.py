@@ -28,6 +28,9 @@ class Node(object):
 #3. Create the delete () function for this data structure            
     def delete(self,data):
         tmp=self.arr
+        if (not (data in tmp)):
+            print("Element doesn't exist")
+            return
         tmp.remove(data)
         self.data=tmp[0]
         self.toobig=None
